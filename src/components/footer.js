@@ -1,18 +1,18 @@
 import React from "react";
 
 const Footer = () => (
-    <footer className=" w-full text-white p-10 ">
-        <div className=" w-[80%] flex justify-between items-center gap-10 bg-darkBlue text-white  py-12 px-14 mx-auto rounded-xl ">
-            <p className=" text-center font-semibold text-7xl ">
+    <footer className=" w-full text-white lg:p-10 p-6 ">
+        <div className=" lg:w-[80%] flex lg:flex-row flex-col justify-between items-center lg:gap-10 gap-4 bg-darkBlue text-white  lg:py-12 py-6 lg:px-14 px-8 lg:mx-auto rounded-xl ">
+            <p className=" text-center font-semibold lg:text-7xl text-2xl ">
                 Ready to work with us?
             </p>
-            <button className=" flex items-center gap-2 bg-white hover:bg-primary text-primary hover:text-white text-xl font-medium border border-primary px-6 py-4 rounded-full">
+            <button className=" flex items-center gap-2 bg-white hover:bg-primary text-primary hover:text-white lg:text-xl font-medium border border-primary lg:px-6 px-4 lg:py-4 py-2 rounded-full">
                 Get Started<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                 </svg>
             </button>
         </div>
-        <div className=" grid grid-cols-12 w-[80%] mx-auto mt-10 ">
+        <div className=" grid lg:grid-cols-12 lg:w-[80%] mx-auto lg:mt-10 mt-8 ">
             <div className=" col-span-4 ">
                 <img src="/logo.png" alt="logo" />
                 <p className=" text-fadetext mt-4 ">
@@ -33,8 +33,8 @@ const Footer = () => (
                     </li>
                 </ul>
             </div>
-            <div className=" col-span-8 grid grid-cols-12 gap-4 ">
-                <div className=" col-span-4 flex justify-center ">
+            <div className=" col-span-8 grid lg:grid-cols-12 grid-cols-2 gap-4 ">
+                <div className=" lg:col-span-4 flex justify-center ">
                     <ul className=" mt-4 space-y-2 ">
                         <li className=" text-fadetext  hover:underline ">
                             About Us
@@ -53,7 +53,7 @@ const Footer = () => (
                         </li>
                     </ul>
                 </div>
-                <div className=" col-span-4 flex justify-center ">
+                <div className=" lg:col-span-4 flex justify-center ">
                     <ul className=" mt-4 space-y-2 ">
                         <li className=" text-fadetext  hover:underline ">
                             Privacy Policy
@@ -66,7 +66,7 @@ const Footer = () => (
                         </li>
                     </ul>
                 </div>
-                <div className=" col-span-4  flex justify-center ">
+                <div className=" lg:col-span-4  flex justify-center ">
                     <ul className=" mt-4 space-y-2 ">
                         <li className=" flex items-center gap-2 text-fadetext  hover:underline ">
                             <img src="/footer/phone.png" alt="phone" className=" h-5 object-contain " /> 98765433210

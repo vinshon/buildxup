@@ -58,7 +58,7 @@ export default function home() {
   return (
     <div className=" w-full ">
       {/* Section 1 */}
-      <div className=' grid lg:grid-cols-12 grid-cols-1 gap-4  lg:h-[650px] lg:w-[80%] lg"mx-auto lg:px-0 px-4 lg:py-0 py-10'>
+      <div className=' grid lg:grid-cols-12 grid-cols-1 gap-4  lg:h-[650px] lg:w-[80%] lg:mx-auto lg:px-0 px-4 lg:py-0 py-10'>
         <div className=" lg:col-span-7  flex flex-col justify-center ">
           <h1 className=" lg:text-5xl text-2xl font-bold lg:text-start text-center">
             Maximize Profits by Managing Your Projects
@@ -113,7 +113,7 @@ export default function home() {
       </div>
 
       {/* Section 2 */}
-      <div className='grid lg:grid-cols-12 grid-cols-1 gap-4  lg:w-[80%] lg"mx-auto lg:px-0 px-4 py-10 '>
+      <div className='grid lg:grid-cols-12 grid-cols-1 gap-4  lg:w-[80%] lg:mx-auto lg:px-0 px-4 py-10 '>
         <div className="lg:order-1 order-last lg:col-span-6 flex items-center justify-center ">
           <img src="/home/section/section-2.png" alt="section 1" />
         </div>
@@ -144,7 +144,7 @@ export default function home() {
       </div>
 
       {/* Section 3 */}
-      <div className='grid lg:grid-cols-12 grid-cols-1 gap-4  lg:w-[80%] lg"mx-auto lg:px-0 px-4 lg:py-10 py-5'>
+      <div className='grid lg:grid-cols-12 grid-cols-1 gap-4  lg:w-[80%] lg:mx-auto lg:px-0 px-4 lg:py-10 py-5'>
         <div className=" col-span-6  flex flex-col justify-center ">
           <h2 className=" lg:text-5xl text-3xl text-primary font-bold  ">
             What We Do
@@ -196,7 +196,7 @@ export default function home() {
       </div>
 
       {/* Section 4 */}
-      <div className='grid lg:grid-cols-12 grid-cols-1 gap-4  lg:w-[80%] lg"mx-auto lg:px-0 px-4 lg:py-10 py-5'>
+      <div className=' lg:w-[80%] lg:mx-auto lg:px-0 px-4 lg:py-10 py-5'>
         <div>
           <h2 className=" lg:text-5xl text-2xl text-primary font-bold text-center  ">
             Our Services

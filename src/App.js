@@ -9,8 +9,10 @@ export default function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen bg-[#F7F5F0]">
-        <Header />
-        <main className="flex-grow">
+        <div className="fixed w-full">
+          <Header />
+        </div>
+        <main className="flex-grow mt-24 ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<Construction />} />

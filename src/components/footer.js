@@ -69,10 +69,10 @@ const Footer = () => (
                 <div className=" lg:col-span-4  flex justify-center ">
                     <ul className=" mt-4 space-y-2 ">
                         <li className=" flex items-center gap-2 text-fadetext  hover:underline ">
-                            <img src="/footer/phone.png" alt="phone" className=" h-5 object-contain " /> 6382714031
+                            <img src="/footer/phone.png" alt="phone" className=" h-5 object-contain " /> <a href="tel:+916382714031" >+91 6382714031</a>
                         </li>
                         <li className=" flex items-center gap-2 text-fadetext  hover:underline ">
-                            <img src="/footer/mail.png" alt="email" className=" h-5 object-contain " /> buildxup@outlook.com
+                            <img src="/footer/mail.png" alt="email" className=" h-5 object-contain " /> <a href="mailto:buildxup@outlook.com">buildxup@outlook.com</a>
                         </li>
                         <li className=" flex  gap-2 text-fadetext  hover:underline ">
                             <img src="/footer/location.png" alt="loaction" className=" h-5 object-contain " /> Ramchand, Kotahiri,The Nilgiris, Tamil Nadu, India. 643217

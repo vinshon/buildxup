@@ -20,6 +20,7 @@ export default function App() {
             <Route path="/pricing" element={<Construction />} />
             <Route path="/help" element={<Construction />} />
             <Route path="/contact" element={<Construction />} />
+            <Route path="/construction" element={<Construction />} />
           </Routes>
         </main>
         <Footer />

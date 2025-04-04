@@ -1,5 +1,6 @@
 import React from "react";
 import AccordionItem from "../components/faq";
+import { Link } from "react-router-dom";
 
 const faqData = [
   {
@@ -85,26 +86,31 @@ export default function home() {
             </ul>
           </div>
           <div className=" flex lg:flex-row flex-col lg:justify-normal justify-center lg:items-start items-center  lg:gap-4 gap-2 lg:mt-10 mt-5  ">
-            <button className=" w-fit flex gap-2 items-center bg-primary hover:bg-white border border-primary  text-white hover:text-primary font-medium lg:px-5 px-4 lg:py-3 py-2  rounded-full ">
-              Schedule a Demo
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </button>
-            <button className=" font-medium underline underline-offset-4 px-6 py-2 rounded-md ">
-              Get 7 days free trial*
-            </button>
+            <Link to={"/construction"}>
+              <button className=" w-fit flex gap-2 items-center bg-primary hover:bg-white border border-primary  text-white hover:text-primary font-medium lg:px-5 px-4 lg:py-3 py-2  rounded-full ">
+                Schedule a Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </button>
+            </Link>
+
+            <Link to={"/construction"}>
+              <button className=" font-medium underline underline-offset-4 px-6 py-2 rounded-md ">
+                Get 7 days free trial*
+              </button>
+            </Link>
           </div>
         </div>
         <div className=" lg:col-span-5 flex items-center justify-center ">
@@ -287,23 +293,25 @@ export default function home() {
               Can’t find the answer you’re looking for? Please chat to our
               friendly team.
             </p>
-            <button className=" flex gap-2 items-center bg-primary hover:bg-white border border-primary lg:text-base text-sm text-white hover:text-primary font-semibold lg:px-5 px-4 py-3 mt-4 rounded-full ">
-              Get in touch
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </button>
+            <Link to={"/construction"}>
+              <button className=" flex gap-2 items-center bg-primary hover:bg-white border border-primary lg:text-base text-sm text-white hover:text-primary font-semibold lg:px-5 px-4 py-3 mt-4 rounded-full ">
+                Get in touch
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </button>
+            </Link>
           </div>
         </div>
 

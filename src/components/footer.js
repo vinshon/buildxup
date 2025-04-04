@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => (
   <footer className=" w-full text-white lg:p-10 p-6 ">
@@ -6,23 +7,25 @@ const Footer = () => (
       <p className=" text-center font-semibold lg:text-7xl text-2xl ">
         Ready to work with us?
       </p>
-      <button className=" flex items-center gap-2 bg-white hover:bg-primary text-primary hover:text-white lg:text-xl font-medium border border-primary lg:px-6 px-4 lg:py-4 py-2 rounded-full">
-        Get Started
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="size-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-          />
-        </svg>
-      </button>
+      <Link to="/construction">
+        <button className=" flex items-center gap-2 bg-white hover:bg-primary text-primary hover:text-white lg:text-xl font-medium border border-primary lg:px-6 px-4 lg:py-4 py-2 rounded-full">
+          Get Started
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+            />
+          </svg>
+        </button>
+      </Link>
     </div>
     <div className=" grid lg:grid-cols-12 lg:w-[80%] mx-auto lg:mt-10 mt-8 ">
       <div className=" col-span-4 ">
@@ -57,18 +60,28 @@ const Footer = () => (
       <div className=" col-span-8 grid lg:grid-cols-12 grid-cols-2 gap-4 ">
         <div className=" lg:col-span-4 flex justify-center ">
           <ul className=" mt-4 space-y-2 ">
-            <li className=" text-fadetext  hover:underline ">About Us</li>
-            <li className=" text-fadetext  hover:underline ">Services</li>
-            <li className=" text-fadetext  hover:underline ">Pricing</li>
-            <li className=" text-fadetext  hover:underline ">Help Center</li>
-            <li className=" text-fadetext  hover:underline ">Contact</li>
+            <li className=" text-fadetext  hover:underline ">
+              <Link to={"/about"}>About Us</Link>{" "}
+            </li>
+            <li className=" text-fadetext  hover:underline ">
+              <Link to={"/services"}>Services</Link>
+            </li>
+            <li className=" text-fadetext  hover:underline ">
+              <Link to={"/pricing"}>Pricing</Link>
+            </li>
+            <li className=" text-fadetext  hover:underline ">
+              <Link to={"/help"}>Help Center</Link>
+            </li>
+            <li className=" text-fadetext  hover:underline ">
+              <Link to={"/contact"}>Contact</Link>
+            </li>
           </ul>
         </div>
         <div className=" lg:col-span-4 flex justify-center ">
           <ul className=" mt-4 space-y-2 ">
-            <li className=" text-fadetext  hover:underline ">Privacy Policy</li>
-            <li className=" text-fadetext  hover:underline ">Copyright</li>
-            <li className=" text-fadetext  hover:underline ">Email Address</li>
+            <li className=" text-fadetext  hover:underline "> <Link to={"/construction"}>Privacy Policy</Link></li>
+            <li className=" text-fadetext  hover:underline "><Link to={"/construction"}>Copyright</Link></li>
+            {/* <li className=" text-fadetext  hover:underline ">Email Address</li> */}
           </ul>
         </div>
         <div className=" lg:col-span-4  flex justify-center ">

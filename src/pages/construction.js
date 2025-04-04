@@ -48,7 +48,7 @@ export default function construction() {
             </div>
             <p className=" mt-10">
               <span className="  text-fadetext">Already User Login Count:</span>{" "}
-              <b>2943</b>
+              <b>32</b>
             </p>
           </div>
         </div>

@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
-export default function construction() {
+export default function Construction() {
+  const form = useRef();
+  const navigate = useNavigate();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_t3lxqgs", "template_0cogz7c", form.current, {
+        publicKey: "zZJhs6s1xJsa88EgI",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          navigate("/thank-you");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <div className=" lg:h-[600px] flex items-center justify-center ">
       <div className=" lg:w-[80%] mx-auto grid lg:grid-cols-12 lg:px-0 px-4  ">
@@ -38,13 +61,20 @@ export default function construction() {
               .
             </p>
             <div className="mt-5 space-x-4">
-              <input
-                className=" border px-4 py-2 lg:py-1.5 focus:outline-none rounded-md "
-                placeholder="Enter your Email Address"
-              />
-              <button className=" font-medium hover:bg-blue-600 bg-primary px-4 py-2 border-primary rounded-md text-white">
-                Submit
-              </button>
+              <form ref={form} onSubmit={sendEmail}>
+                <input
+                  type="text"
+                  name="message"
+                  className=" border px-4 py-2 lg:py-1.5 focus:outline-none rounded-md "
+                  placeholder="Enter your Email Address"
+                />
+                <button
+                  type="submit"
+                  className=" font-medium hover:bg-blue-600 bg-primary px-4 py-2 border-primary rounded-md text-white"
+                >
+                  Submit
+                </button>
+              </form>
             </div>
             <p className=" mt-10">
               <span className="  text-fadetext">Already User Login Count:</span>{" "}

@@ -4,6 +4,8 @@ import Home from "./pages/home";
 import Header from "./components/header"; // ✅ Import Header
 import Footer from "./components/footer"; // ✅ Import Footer
 import Construction from "./pages/construction";
+import Thankyou from "./pages/thank-you";
+
 
 export default function App() {
   return (
@@ -21,6 +23,8 @@ export default function App() {
             <Route path="/help" element={<Construction />} />
             <Route path="/contact" element={<Construction />} />
             <Route path="/construction" element={<Construction />} />
+            <Route path="/thank-you" element={<Thankyou />} />
+
           </Routes>
         </main>
         <Footer />

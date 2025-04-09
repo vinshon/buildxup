@@ -60,12 +60,12 @@ export default function Construction() {
               </a>
               .
             </p>
-            <div className="mt-5 space-x-4">
-              <form ref={form} onSubmit={sendEmail}>
+            <div className="mt-5 ">
+              <form className="space-x-4" ref={form} onSubmit={sendEmail}>
                 <input
                   type="text"
                   name="message"
-                  className=" border px-4 py-2 lg:py-1.5 focus:outline-none rounded-md "
+                  className=" border px-4 py-2 lg:py-2.5 focus:outline-none rounded-md "
                   placeholder="Enter your Email Address"
                 />
                 <button

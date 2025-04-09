@@ -53,18 +53,37 @@ export default function Example() {
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-5">
-          <p className="bg-white hover:bg-primary text-primary hover:text-white font-medium border border-primary px-6 py-2 rounded-full">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-5 cursor-pointer">
+          {/* <Link
+            to="/login"
+            className="bg-white hover:bg-primary text-primary hover:text-white font-medium border border-primary px-6 py-2 rounded-full"
+          >
+            Log in
+          </Link>
+
+          <Link
+            to="/signup"
+            className="bg-white hover:bg-primary text-primary hover:text-white font-medium border border-primary px-6 py-2 rounded-full"
+          >
+            Signup
+          </Link> */}
+          <p
+            
+            className="bg-white hover:bg-primary text-primary hover:text-white font-medium border border-primary px-6 py-2 rounded-full"
+          >
             Log in
           </p>
 
-          <p className="bg-white hover:bg-primary text-primary hover:text-white font-medium border border-primary px-6 py-2 rounded-full">
+          <p
+            
+            className="hover:bg-white bg-primary hover:text-primary text-white font-medium border border-primary px-6 py-2 rounded-full"
+          >
             Signup
           </p>
           <img
             src="/header/translate.png"
             alt="translate"
-            className="object-contain h-12" 
+            className="object-contain h-12"
           />
         </div>
       </nav>

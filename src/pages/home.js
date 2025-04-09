@@ -120,8 +120,8 @@ export default function home() {
 
       {/* Section 2 */}
       <div className="grid lg:grid-cols-12 grid-cols-1 gap-4  lg:w-[80%] lg:mx-auto lg:px-0 px-4 py-10 ">
-        <div className="lg:order-1 order-last lg:col-span-6 flex items-center justify-center ">
-          <img src="/home/section/section-2.png" alt="section 1" />
+      <div className="  lg:col-span-6 flex items-center justify-center ">
+          <img src="/home/section/section-2.png" alt="section 1"  />
         </div>
         <div className=" lg:col-span-6  flex flex-col justify-center ">
           <h2 className=" lg:text-5xl text-3xl text-primary font-bold  ">
@@ -147,6 +147,7 @@ export default function home() {
             </span>
           </p>
         </div>
+        
       </div>
 
       {/* Section 3 */}
@@ -197,7 +198,7 @@ export default function home() {
           </div>
         </div>
         <div className=" col-span-6 flex items-center justify-center lg:mt-0 mt-2 ">
-          <img src="/home/section/section-3.png" alt="section 1" />
+          <img src="/home/section/section-3.png" alt="section 1" className=" max-h-[500px]"/>
         </div>
       </div>
 

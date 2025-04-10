@@ -119,18 +119,18 @@ export default function home() {
       </div>
 
       {/* Section 2 */}
-      <div className="grid lg:grid-cols-12 grid-cols-1 gap-4  lg:w-[80%] lg:mx-auto lg:px-0 px-4 py-10 ">
+      <div className="grid lg:grid-cols-12 grid-cols-1 gap-4  lg:w-[80%] lg:mx-auto lg:px-0 px-4 py-10 lg:pb-20 ">
         <div className="  lg:col-span-6 flex items-center justify-center lg:order-first order-last">
           <img src="/home/section/section-2.png" alt="section 1" />
         </div>
-        <div className=" lg:col-span-6  flex flex-col justify-center ">
+        <div className=" lg:col-span-6  flex flex-col justify-center lg:text-start text-justify  ">
           <h2 className=" lg:text-5xl text-3xl text-primary font-bold  lg:text-left text-center ">
             About us
           </h2>
-          <h3 className=" lg:text-4xl text-xl font-bold lg:mt-8 mt-2 ">
+          <h3 className=" lg:text-4xl text-xl font-bold lg:mt-8 mt-2 lg:text-start text-center ">
             Empowering Projects. Simplifying Management.
           </h3>
-          <p className=" lg:text-lg text-sm text-fadetext lg:mt-8 mt-4 ">
+          <p className=" lg:text-lg text-sm text-fadetext lg:mt-8 mt-4  ">
             At <b>BuildXup</b>, we believe managing projects and teams shouldn't
             be complicated. That’s why we’ve built a smart, adaptable platform
             that helps businesses of all sizes stay organized, efficient, and in
@@ -148,70 +148,92 @@ export default function home() {
 
       {/* Section 3 */}
       <div className=" bg-white">
-
-     
-      <div className=" lg:w-[80%] lg:mx-auto lg:px-0 px-4 lg:py-10 py-10">
-        <div>
-          <h2 className=" lg:text-5xl text-2xl text-primary font-bold text-center  ">
-            Why BuildXup?
-          </h2>
-          <p className="lg:text-lg  text-fadetext lg:mt-8 mt-4 text-center">
-            Lorem ipsum dolor sit amet, consectetur adipis elit
-          </p>
+        <div className=" lg:w-[80%] lg:mx-auto lg:px-0 px-4 lg:py-20 py-10">
+          <div>
+            <h2 className=" lg:text-5xl text-2xl text-primary font-bold text-center  ">
+              Why BuildXup?
+            </h2>
+            <p className="lg:text-lg  text-fadetext lg:mt-6 mt-2 text-center">
+              Lorem ipsum dolor sit amet, consectetur adipis elit
+            </p>
+          </div>
+          <div className=" grid lg:grid-cols-3  lg:mt-10 mt-4 ">
+            <div className=" bg-white lg:border-r border-b p-8  flex flex-col items-center justify-center ">
+              <img
+                src="/home/icon/whyBuildxup-icon-1.png"
+                alt="why BuildxUp"
+                className=" h-8 lg:h-10 object-contain"
+              />
+              <h3 className=" lg:text-xl font-bold mt-2 ">Industry-Agnostic</h3>
+              <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
+                Designed to support businesses across various sectors, from
+                services to manufacturing and beyond.
+              </p>
+            </div>
+            <div className=" bg-white border-b p-8 flex flex-col items-center justify-center   ">
+              <img
+                src="/home/icon/whyBuildxup-icon-2.png"
+                alt="why BuildxUp"
+                className=" h-8 lg:h-10 object-contain"
+              />
+              <h3 className=" lg:text-xl font-bold mt-2 ">Scalable Plans</h3>
+              <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
+                Flexible options to meet the needs of individuals, teams, and
+                enterprises.
+              </p>
+            </div>
+            <div className=" bg-white lg:border-l border-b p-8 flex flex-col items-center justify-center   ">
+              <img
+                src="/home/icon/whyBuildxup-icon-3.png"
+                alt="why BuildxUp"
+                className=" h-8 lg:h-10 object-contain"
+              />
+              <h3 className=" lg:text-xl font-bold mt-2 ">Smart Automation</h3>
+              <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
+                Save time with daily updates and automated calculations
+                (available on select plans).
+              </p>
+            </div>
+            <div className=" bg-white lg:border-b-0 border-b lg:border-r p-8 flex flex-col items-center justify-center   ">
+              <img
+                src="/home/icon/whyBuildxup-icon-4.png"
+                alt="why BuildxUp"
+                className=" h-8 lg:h-10 object-contain"
+              />
+              <h3 className=" lg:text-xl font-bold mt-2 ">
+                Insightful Reporting
+              </h3>
+              <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
+                Make informed decisions with real-time data and clear,
+                actionable insights.
+              </p>
+            </div>
+            <div className=" bg-white p-8 flex flex-col items-center justify-center lg:border-b-0 border-b   ">
+              <img
+                src="/home/icon/whyBuildxup-icon-5.png"
+                alt="why BuildxUp"
+                className=" h-8 lg:h-10 object-contain"
+              />
+              <h3 className=" lg:text-xl font-bold mt-2 ">Customer-Focused</h3>
+              <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
+                We work closely with our users to continuously improve and adapt
+                to your evolving needs
+              </p>
+            </div>
+            <div className=" bg-white lg:border-b-0  lg:border-l p-8 flex flex-col items-center justify-center   ">
+              <img
+                src="/home/icon/whyBuildxup-icon-6.png"
+                alt="why BuildxUp"
+                className=" h-8 lg:h-10 object-contain"
+              />
+              <h3 className=" lg:text-xl font-bold mt-2 ">Result</h3>
+              <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
+                Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
+                nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className=" grid lg:grid-cols-3  lg:mt-10 mt-6 ">
-          <div className=" bg-white lg:border-r border-b p-8  flex flex-col items-center justify-center ">
-            <img src="/home/icon/whyBuildxup-icon-1.png" alt="why BuildxUp" className=" h-8 lg:h-10 object-contain" />
-            <h3 className=" lg:text-xl font-bold mt-2 ">Industry-Agnostic</h3>
-            <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
-              Designed to support businesses across various sectors, from
-              services to manufacturing and beyond.
-            </p>
-          </div>
-          <div className=" bg-white border-b p-8 flex flex-col items-center justify-center   ">
-          <img src="/home/icon/whyBuildxup-icon-2.png" alt="why BuildxUp" className=" h-8 lg:h-10 object-contain" />
-          <h3 className=" lg:text-xl font-bold mt-2 ">Scalable Plans</h3>
-            <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
-              Flexible options to meet the needs of individuals, teams, and
-              enterprises.
-            </p>
-          </div>
-          <div className=" bg-white lg:border-l border-b p-8 flex flex-col items-center justify-center   ">
-          <img src="/home/icon/whyBuildxup-icon-3.png" alt="why BuildxUp" className=" h-8 lg:h-10 object-contain" />
-          <h3 className=" lg:text-xl font-bold mt-2 ">Smart Automation</h3>
-            <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
-              Save time with daily updates and automated calculations (available
-              on select plans).
-            </p>
-          </div>
-          <div className=" bg-white lg:border-b-0 border-b lg:border-r p-8 flex flex-col items-center justify-center   ">
-          <img src="/home/icon/whyBuildxup-icon-4.png" alt="why BuildxUp" className=" h-8 lg:h-10 object-contain" />
-          <h3 className=" lg:text-xl font-bold mt-2 ">
-              Insightful Reporting
-            </h3>
-            <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
-              Make informed decisions with real-time data and clear, actionable
-              insights.
-            </p>
-          </div>
-          <div className=" bg-white p-8 flex flex-col items-center justify-center lg:border-b-0 border-b   ">
-          <img src="/home/icon/whyBuildxup-icon-5.png" alt="why BuildxUp" className=" h-8 lg:h-10 object-contain" />
-          <h3 className=" lg:text-xl font-bold mt-2 ">Customer-Focused</h3>
-            <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
-              We work closely with our users to continuously improve and adapt
-              to your evolving needs
-            </p>
-          </div>
-          <div className=" bg-white lg:border-b-0  lg:border-l p-8 flex flex-col items-center justify-center   ">
-          <img src="/home/icon/whyBuildxup-icon-6.png" alt="why BuildxUp" className=" h-8 lg:h-10 object-contain" />
-          <h3 className=" lg:text-xl font-bold mt-2 ">Result</h3>
-            <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
-              Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec,
-              proin faucibus nibh et sagittis a. Lacinia purus ac amet.
-            </p>
-          </div>
-        </div>
-      </div>
       </div>
 
       {/* Section 4 */}

@@ -8,6 +8,7 @@ import Thankyou from "./pages/thank-you";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Dashboard from "./pages/dashboard";
+import Projects from "./pages/dashboard/projects";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/help" element={<Construction />} />
           <Route path="/contact" element={<Construction />} />
           <Route path="/thank-you" element={<Thankyou />} />
+          <Route path="/construction" element={<Construction />} />
         </Route>
 
         {/* Auth Pages - No Layout */}
@@ -31,6 +33,8 @@ export default function App() {
         {/* Dashboard Layout */}
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/project" element={<Projects />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

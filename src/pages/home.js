@@ -153,9 +153,6 @@ export default function home() {
             <h2 className=" lg:text-5xl text-2xl text-primary font-bold text-center  ">
               Why BuildXup?
             </h2>
-            <p className="lg:text-lg  text-fadetext lg:mt-6 mt-2 text-center">
-              Lorem ipsum dolor sit amet, consectetur adipis elit
-            </p>
           </div>
           <div className=" grid lg:grid-cols-3  lg:mt-10 mt-4 ">
             <div className=" bg-white lg:border-r border-b p-8  flex flex-col items-center justify-center ">

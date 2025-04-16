@@ -9,6 +9,7 @@ import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Dashboard from "./pages/dashboard";
 import Projects from "./pages/dashboard/projects";
+import AboutUs from "./pages/about"
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
         {/* Main Layout routes */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Construction />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Construction />} />
           <Route path="/pricing" element={<Construction />} />
           <Route path="/help" element={<Construction />} />

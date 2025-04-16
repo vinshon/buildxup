@@ -14,7 +14,7 @@ const DashboardLayout = () => {
           {/* Main Content */}
           <div className="lg:col-span-10">
             <div className="h-24 w-full bg-white shadow"></div>
-            <div className="w-full p-4">
+            <div className="w-full lg:p-4 p-2">
               <Outlet />
             </div>
           </div>

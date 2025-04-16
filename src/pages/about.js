@@ -76,7 +76,7 @@ export default function AboutUs() {
 
       {/* Section 3 */}
       <div className=" bg-white ">
-        <div className=" lg:w-[80%] lg:mx-auto lg:px-0 px-4 lg:pt-10 lg:pb-28 lg:py-0 py-10">
+        <div className=" lg:w-[75%] lg:mx-auto lg:px-0 px-4 lg:pt-10 lg:pb-28 lg:py-0 py-10">
           <div className=" flex flex-col justify-center  items-center">
             <p className=" text-primary text-base font-medium ">
               1200+ Happy Buildxup Users

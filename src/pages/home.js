@@ -128,21 +128,28 @@ export default function home() {
             About us
           </h2>
           <h3 className=" lg:text-4xl text-xl font-bold lg:mt-8 mt-2 lg:text-start text-center ">
-            Empowering Projects. Simplifying Management.
+            Our Story
           </h3>
-          <p className=" lg:text-lg text-sm text-fadetext lg:mt-8 mt-4  ">
-            At <b>BuildXup</b>, we believe managing projects and teams shouldn't
-            be complicated. That’s why we’ve built a smart, adaptable platform
-            that helps businesses of all sizes stay organized, efficient, and in
-            control.
+          <p className=" lg:text-lg text-sm text-fadetext lg:mt-5 mt-4  ">
+            BuildXup was born out of a simple need—to simplify project
+            management and make operations seamless for companies juggling
+            multiple projects. Our founders, with extensive experience in the
+            construction and project management industries, realized the
+            challenges of tracking attendance, managing payroll, and keeping
+            projects on schedule.
           </p>
           <p className=" lg:text-lg text-sm text-fadetext lg:mt-4 mt-2 ">
-            Whether you're running a startup, managing a growing team, or
-            overseeing large-scale operations, BuildXup gives you the tools to
-            track attendance, manage salaries, monitor project timelines, and
-            generate insightful reports — all from a single, intuitive
-            dashboard.
+            To bridge this gap, we went a step further. Unlike traditional
+            platforms, we don’t just rely on automated inputs—we call our
+            subscribed clients every day to gather real-time updates, ensuring
+            accuracy and accountability.
           </p>
+          <Link to="/construction">
+          
+          <button className="w-fit flex gap-2 items-center bg-primary hover:bg-white border border-primary  text-white hover:text-primary font-medium mt-5 lg:px-4 px-3 lg:py-2 py-2  rounded-full">
+            Read More
+          </button>
+          </Link>
         </div>
       </div>
 
@@ -225,8 +232,8 @@ export default function home() {
               />
               <h3 className=" lg:text-xl font-bold mt-2 ">Result</h3>
               <p className=" lg:text-base text-sm text-fadetext mt-2 text-center ">
-                Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim
-                nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.
+                Empowering businesses to achieve tangible outcomes through
+                smart, data-driven solutions.
               </p>
             </div>
           </div>

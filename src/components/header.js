@@ -54,20 +54,20 @@ export default function Example() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-5 cursor-pointer">
-          {/* <Link
-            to="/dashboard"
+          <Link
+            to="/construction"
             className="bg-white hover:bg-primary text-primary hover:text-white font-medium border border-primary px-6 py-2 rounded-full"
           >
             Log in
           </Link>
 
           <Link
-            to="/signup"
-            className="bg-white hover:bg-primary text-primary hover:text-white font-medium border border-primary px-6 py-2 rounded-full"
+            to="/construction"
+            className="hover:bg-white bg-primary hover:text-primary text-white font-medium border border-primary px-6 py-2 rounded-full"
           >
             Signup
-          </Link> */}
-          <p
+          </Link>
+          {/* <p
             
             className="bg-white hover:bg-primary text-primary hover:text-white font-medium border border-primary px-6 py-2 rounded-full"
           >
@@ -79,7 +79,7 @@ export default function Example() {
             className="hover:bg-white bg-primary hover:text-primary text-white font-medium border border-primary px-6 py-2 rounded-full"
           >
             Signup
-          </p>
+          </p> */}
           <img
             src="/header/translate.png"
             alt="translate"

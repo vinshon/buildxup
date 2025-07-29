@@ -1,49 +1,27 @@
-# Use public Node.js 20 image from Docker Hub
+# Use official Node.js 20 image
+FROM node:20
 
-FROM node:20 AS builder
- 
-RUN mkdir /app
+# Create app directory
+WORKDIR /app
 
-WORKDIR "/app"
- 
-# Clean up old node_modules and lock file if they exist
-
+# Optional: Clean up in case you're rebuilding inside Docker (usually not necessary here)
 RUN rm -rf node_modules package-lock.json
- 
-# Copy package files and install dependencies
 
+# Install dependencies
 COPY package.json package-lock.json* ./
-
 RUN npm install --legacy-peer-deps
- 
-# Copy source code and environment file
 
-COPY ./ ./
+# Copy the rest of your app's source code
+COPY . .
 
+# Copy env if needed
 COPY .env .env
- 
-# Build the application
 
+# Build the app (if you have a build step; e.g., Next.js, React, etc.)
 RUN npm run build
- 
-# Final stage: Use Apache HTTP server from Docker Hub
 
-FROM httpd:2.4
- 
-EXPOSE 80
- 
-# Create target directory for built app
+# Expose app port (update if your app runs on a different port)
+EXPOSE 3000
 
-RUN mkdir -p /usr/local/apache2/htdocs/
- 
-# Copy built frontend files from builder
-
-COPY --from=builder /app/build /usr/local/apache2/htdocs/
-
-COPY --from=builder /app/httpd.conf /usr/local/apache2/conf/httpd.conf
- 
-# Set appropriate permissions (user:group www-data is not default in httpd, but used in Debian-based images like Apache in Ubuntu; httpd uses `daemon`)
-
-RUN chown -R daemon:daemon /usr/local/apache2/htdocs/
-
- 
+# Run the app
+CMD ["npm", "start"]

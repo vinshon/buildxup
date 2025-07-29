@@ -15,7 +15,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - aws s3 cp s3://buildxup-delopyment-stage/frontend/.env .
+      - echo Downloading .env file from S3...
+      - aws s3 cp s3://buildxup-delopyment-stage/frontend/.env .env
       - echo Building the Docker image...
       - docker build --cache-from 530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:cache -t 530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:latest .
       - docker tag 530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:latest 530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:$IMAGE_TAG
@@ -27,7 +28,6 @@ phases:
       - docker push 530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:latest
       - docker push 530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:$IMAGE_TAG
       - printf '[{"name":"%s","imageUri":"%s"}]' "buildxup-container" "530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:$IMAGE_TAG" > imagedefinitions.json
-
 
 artifacts:
   files: imagedefinitions.json

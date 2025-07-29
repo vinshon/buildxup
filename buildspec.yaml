@@ -26,7 +26,8 @@ phases:
       - echo Pushing the Docker images...
       - docker push 530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:latest
       - docker push 530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:$IMAGE_TAG
-      - printf '[{"name":"%s","imageUri":"%s"}]' "stage/buildxup/frontend" "530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:$IMAGE_TAG" > imagedefinitions.json
+      - printf '[{"name":"%s","imageUri":"%s"}]' "buildxup-container" "530061243896.dkr.ecr.us-east-1.amazonaws.com/stage/buildxup/frontend:$IMAGE_TAG" > imagedefinitions.json
+
 
 artifacts:
   files: imagedefinitions.json

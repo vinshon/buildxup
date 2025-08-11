@@ -1,15 +1,13 @@
 import { useState } from "react";
 import DashboardView from "../components/dashboard/dashboardView";
-import ProjectView from "../components/dashboard/projectView/projectview"
+// import ProjectView from "./dashboard/dailyTask"
 
 export default function Dashboard() {
   const [route, setRoute] = useState("dashboard");
+    const [selectedProjectId, setSelectedProjectId] = useState(null);
 
-  // Route-to-component mapping
-  const routes = {
-    dashboard: <DashboardView setRoute={setRoute} />,
-    projects: <ProjectView />,
 
-  };
-  return <div className=" ">{routes[route] || <div>Not Found</div>}</div>;
+  return (
+    <DashboardView setRoute={setRoute}  setSelectedProjectId={setSelectedProjectId} />
+  )
 }

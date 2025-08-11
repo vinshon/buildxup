@@ -55,14 +55,14 @@ export default function Example() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-5 cursor-pointer">
           <Link
-            to="/construction"
+            to="/login"
             className="bg-white hover:bg-primary text-primary hover:text-white font-medium border border-primary px-6 py-2 rounded-full"
           >
             Log in
           </Link>
 
           <Link
-            to="/construction"
+            to="/signup"
             className="hover:bg-white bg-primary hover:text-primary text-white font-medium border border-primary px-6 py-2 rounded-full"
           >
             Signup

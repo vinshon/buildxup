@@ -31,7 +31,7 @@ export default function ChildProjectInfo() {
     const fetchProjectData = async () => {
       try {
         const res = await fetch(
-          `http://localhost:4000/tasks/${taskId}/attendance`,
+          `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${taskId}/attendance`,
           {
             method: "GET",
             headers: {
@@ -60,7 +60,7 @@ export default function ChildProjectInfo() {
     console.log("paoload", payload);
     try {
       const res = await fetch(
-        `http://localhost:4000/tasks/${taskId}/attendance/bulk`,
+        `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${taskId}/attendance/bulk`,
         {
           method: "POST",
           headers: {
@@ -104,7 +104,7 @@ export default function ChildProjectInfo() {
 
     try {
       const res = await fetch(
-        `http://localhost:4000/tasks/${selectedEmp.task_id}/attendance/${selectedEmp.id}`,
+        `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${selectedEmp.task_id}/attendance/${selectedEmp.id}`,
         {
           method: "DELETE",
           headers: {

@@ -80,7 +80,7 @@ export default function Daily_task() {
 
       try {
         const res = await fetch(
-          `http://localhost:4000/tasks?project_id=${projectId}`,
+          `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks?project_id=${projectId}`,
           {
             method: "GET",
             headers: {
@@ -101,7 +101,7 @@ export default function Daily_task() {
         console.error("Fetch error:", err.message);
       }
       try {
-        const res = await fetch(`http://localhost:4000/projects/${projectId}`, {
+        const res = await fetch(`https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/projects/${projectId}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

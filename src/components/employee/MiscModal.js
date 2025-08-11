@@ -21,8 +21,8 @@ const MiscModal = ({ isOpen, onClose, onRefresh, editData, taskId }) => {
   const handleSubmit = async () => {
     try {
       const url = editData
-        ? `http://localhost:4000/tasks/${taskId}/miscellaneous/${editData.id}`
-        : `http://localhost:4000/tasks/${taskId}/miscellaneous`;
+        ? `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${taskId}/miscellaneous/${editData.id}`
+        : `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${taskId}/miscellaneous`;
 
       const method = editData ? "PUT" : "POST";
 

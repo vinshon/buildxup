@@ -24,8 +24,8 @@ export default function ProjectImageModal({ onClose, onRefresh, editImage, taskI
     formData.append("description", description);
 
     const url = editImage
-      ? `http://localhost:4000/tasks/${taskId}/images/${editImage.id}`
-      : `http://localhost:4000/tasks/${taskId}/images`;
+      ? `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${taskId}/images/${editImage.id}`
+      : `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${taskId}/images`;
     const method = editImage ? "PUT" : "POST";
 
     try {

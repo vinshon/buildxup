@@ -69,7 +69,7 @@ export default function Example({
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:4000/projects", {
+      const res = await fetch("https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/projects", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -19,7 +19,7 @@ export default function Login() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:4000/auth/verify-login", {
+      const response = await fetch("https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/auth/verify-login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -4,7 +4,7 @@ import ProjectImageModal from "./ProjectImageModal";
 
 export default function ProjectImages({taskId}) {
     const TASK_ID = taskId; // replace with actual
-const API_URL = `http://localhost:4000/tasks/${TASK_ID}/images`;
+const API_URL = `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${TASK_ID}/images`;
 
   const [images, setImages] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);

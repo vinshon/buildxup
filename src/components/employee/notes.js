@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export default function Notes({ taskId }) {
-  const API_URL = `http://localhost:4000/tasks/${taskId}/notes`;
+  const API_URL = `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${taskId}/notes`;
 
   const [note, setNote] = useState(null);
   const [isEditing, setIsEditing] = useState(false);

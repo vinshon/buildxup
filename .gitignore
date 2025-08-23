@@ -6,3 +6,6 @@ build/
 
 # Environment files
 .env
+
+# Build output
+build/

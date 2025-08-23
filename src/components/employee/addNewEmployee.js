@@ -70,7 +70,7 @@ export default function AddEmployeeModal({
     };
 
     try {
-      const response = await fetch("https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/employees", {
+      const response = await fetch("https://api-stage.buildxup.com/employees", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -16,7 +16,7 @@ export default function DashboardView({ setRoute, setSelectedProjectId }) {
 
       try {
         const res = await fetch(
-          `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/projects?status=${projectStatus}`,
+          `https://api-stage.buildxup.com/projects?status=${projectStatus}`,
           {
             method: "GET",
             headers: {
@@ -38,7 +38,7 @@ export default function DashboardView({ setRoute, setSelectedProjectId }) {
         console.error("Fetch error:", err.message);
       }
       try {
-        const res = await fetch(`https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/projects/overview`, {
+        const res = await fetch(`https://api-stage.buildxup.com/projects/overview`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

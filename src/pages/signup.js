@@ -37,7 +37,7 @@ export default function Signup() {
     setGeneralError("");
 
     try {
-      const res = await fetch("https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/auth/temp-otp", {
+      const res = await fetch("https://api-stage.buildxup.com/auth/temp-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -89,7 +89,7 @@ export default function Signup() {
     }
 
     try {
-      const verifyRes = await fetch("https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/auth/verify-otp", {
+      const verifyRes = await fetch("https://api-stage.buildxup.com/auth/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: formData.email, otp }),
@@ -99,7 +99,7 @@ export default function Signup() {
 
       const { name, email, phone, password } = formData;
 
-      const signupRes = await fetch("https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/auth/signup", {
+      const signupRes = await fetch("https://api-stage.buildxup.com/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

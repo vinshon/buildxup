@@ -40,12 +40,12 @@ export default function TaskModal({ open, setOpen, projectId , setTaskRefresh, t
     const formData = new FormData();
     formData.append("task_name", taskTitle);
     formData.append("due_date", taskDate);
-    // formData.append("image", taskFile);
+    formData.append("images", taskFile);
     formData.append("task_description", "");
     formData.append("project_id", projectId);
 
     try {
-      const response = await fetch("https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks", {
+      const response = await fetch("https://api-stage.buildxup.com/tasks", {
         method: "POST",
         body: formData,
         headers: {
@@ -57,7 +57,6 @@ export default function TaskModal({ open, setOpen, projectId , setTaskRefresh, t
 
       const data = await response.json();
       console.log("Task created:", data);
-      alert("Task submitted successfully!");
       setOpen(false);
       setTaskRefresh(!taskRefresh)
     } catch (error) {

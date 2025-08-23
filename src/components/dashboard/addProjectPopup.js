@@ -64,12 +64,12 @@ export default function Example({
     formData.append("project_end_date", endDate);
     formData.append("project_status", projectStatus);
     if (imageFile) {
-      formData.append("project_image", [imageFile]);
+      formData.append("images", imageFile);
     }
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/projects", {
+      const res = await fetch("https://api-stage.buildxup.com/projects", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -9,7 +9,7 @@ import {
 
 export default function Miscellaneous({ taskId }) {
   const TASK_ID = taskId; // replace this
-  const API_URL = `https://xq64uxw8qb.execute-api.us-east-1.amazonaws.com/Stage/tasks/${taskId}/miscellaneous`;
+  const API_URL = `https://api-stage.buildxup.com/tasks/${taskId}/miscellaneous`;
 
   const [data, setData] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);

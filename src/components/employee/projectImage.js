@@ -4,7 +4,7 @@ import ProjectImageModal from "./ProjectImageModal";
 
 export default function ProjectImages({taskId}) {
     const TASK_ID = taskId; // replace with actual
-const API_URL = `http://localhost:4000/tasks/${TASK_ID}/images`;
+const API_URL = `https://api-stage.buildxup.com/tasks/${TASK_ID}/images`;
 
   const [images, setImages] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
@@ -19,7 +19,7 @@ const API_URL = `http://localhost:4000/tasks/${TASK_ID}/images`;
         },
       });
       const result = await res.json();
-      setImages(Array.isArray(result) ? result : []);
+      setImages(result.data);
 
     } catch (err) {
       console.error("Fetch failed", err);
@@ -69,7 +69,7 @@ const API_URL = `http://localhost:4000/tasks/${TASK_ID}/images`;
           Add New
         </button>
       </div>
-
+{console.log(images)}
       {images.length === 0 ? (
         <div className="flex-1 flex items-center justify-center">
           <div className="flex flex-col items-center text-gray-400 text-center">
@@ -82,9 +82,9 @@ const API_URL = `http://localhost:4000/tasks/${TASK_ID}/images`;
           {images.map((img) => (
             <div key={img.id} className="relative group">
               <img
-                src={img.task_image}
+                src={img.image_url}
                 alt={img.description}
-                className="w-full h-20 object-cover rounded-md"
+                className="w-full h-40 object-contain rounded-md border "
               />
               <div className="absolute top-1 right-1 hidden group-hover:flex gap-1">
                 <button

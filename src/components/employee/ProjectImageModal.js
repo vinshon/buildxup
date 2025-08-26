@@ -20,12 +20,12 @@ export default function ProjectImageModal({ onClose, onRefresh, editImage, taskI
   const handleSubmit = async () => {
     const token = localStorage.getItem("token");
     const formData = new FormData();
-    if (file) formData.append("task_image", file);
+    if (file) formData.append("images", file);
     formData.append("description", description);
 
     const url = editImage
-      ? `http://localhost:4000/tasks/${taskId}/images/${editImage.id}`
-      : `http://localhost:4000/tasks/${taskId}/images`;
+      ? `https://api-stage.buildxup.com/tasks/${taskId}/images/${editImage.id}`
+      : `https://api-stage.buildxup.com/tasks/${taskId}/images`;
     const method = editImage ? "PUT" : "POST";
 
     try {

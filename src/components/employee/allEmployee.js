@@ -16,7 +16,7 @@ export default function EmployeeListModal({ open, setOpen, attendanceCreate }) {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await fetch("http://localhost:4000/employees", {
+        const res = await fetch("https://api-stage.buildxup.com/employees", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

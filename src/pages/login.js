@@ -19,14 +19,17 @@ export default function Login() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:4000/auth/verify-login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
+      const response = await fetch(
+        "https://api-stage.buildxup.com/auth/verify-login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
+ 
       const data = await response.json();
 
       if (!response.ok) {
@@ -39,6 +42,8 @@ export default function Login() {
       localStorage.setItem("user_id", data.data.user_id);
       localStorage.setItem("company_id", data.data.company_id);
       localStorage.setItem("role", data.data.role);
+      // Save the current date & time
+      localStorage.setItem("login_time", new Date().toISOString());
 
       // Navigate to dashboard
       navigate("/dashboard");

@@ -118,7 +118,7 @@ export default function SideBarMenu() {
   const location = useLocation();
 
   return (
-    <div className="flex flex-col bg-white  border-r border-gray-200 lg:text-base text-sm">
+    <div className="flex flex-col bg-white  border-r border-gray-200 lg:text-base text-sm w-full">
       {/* Logo (fixed) */}
       <div className="py-4 flex justify-center items-center border-b shrink-0 w-full">
         <img src="/logo.png" alt="logo" className="h-10" />
@@ -145,7 +145,7 @@ export default function SideBarMenu() {
         </ul>
 
         {/* Recent Projects */}
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <h2 className="text-xs text-fadetext font-semibold mb-3 uppercase">Recent Projects</h2>
           <ul className="space-y-2 font-medium">
             {recentProjects.map((project, i) => (
@@ -160,7 +160,7 @@ export default function SideBarMenu() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
 
       {/* Profile (sticky bottom) */}

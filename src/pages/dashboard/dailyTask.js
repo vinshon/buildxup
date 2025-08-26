@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import AddNewDailyReport from "../../components/dashboard/projectView/addNewDailyReportPopup";
 import { useSearchParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+ 
 // const reportCards = [
 //   {
 //     title: "Light Work",

@@ -31,7 +31,7 @@ export default function ChildProjectInfo() {
     const fetchProjectData = async () => {
       try {
         const res = await fetch(
-          `http://localhost:4000/tasks/${taskId}/attendance`,
+          `https://api-stage.buildxup.com/tasks/${taskId}/attendance`,
           {
             method: "GET",
             headers: {
@@ -60,7 +60,7 @@ export default function ChildProjectInfo() {
     console.log("paoload", payload);
     try {
       const res = await fetch(
-        `http://localhost:4000/tasks/${taskId}/attendance/bulk`,
+        `https://api-stage.buildxup.com/tasks/${taskId}/attendance/bulk`,
         {
           method: "POST",
           headers: {
@@ -104,7 +104,7 @@ export default function ChildProjectInfo() {
 
     try {
       const res = await fetch(
-        `http://localhost:4000/tasks/${selectedEmp.task_id}/attendance/${selectedEmp.id}`,
+        `https://api-stage.buildxup.com/tasks/${selectedEmp.task_id}/attendance/${selectedEmp.id}`,
         {
           method: "DELETE",
           headers: {
@@ -317,7 +317,7 @@ export default function ChildProjectInfo() {
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-2 mt-5 gap-4">
+        <div className="grid lg:grid-cols-2 mt-5 gap-4">
           {/* Miscellaneous Info - 80% */}
           {/* <div className="bg-white rounded-xl shadow flex flex-col">
             <div className="flex justify-between items-center py-4 px-6 border-b">

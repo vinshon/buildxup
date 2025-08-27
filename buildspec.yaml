@@ -9,8 +9,11 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 530061243896.dkr.ecr.us-east-1.amazonaws.com
+      - docker pull 530061243896.dkr.ecr.us-east-1.amazonaws.com/node-alpine:22 || true
+      - docker pull 530061243896.dkr.ecr.us-east-1.amazonaws.com/nginx-alpine:latest || true
       - COMMIT_HASH=$(echo latest | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
+
 
   build:
     commands:

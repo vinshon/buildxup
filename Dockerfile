@@ -1,19 +1,19 @@
 # ---------- Build Stage ----------
-FROM node:22-alpine AS builder
+FROM 530061243896.dkr.ecr.us-east-1.amazonaws.com/node-alpine:22 AS builder
 WORKDIR /app
 
 # Install deps
 COPY package.json package-lock.json* ./
 RUN npm install --legacy-peer-deps
 
-# Copy app and .env from build context (CodeBuild will download .env from S3 before this)
+# Copy app and .env from build context
 COPY . . 
 
-# Build app (env variables required for React must be present now)
+# Build app
 RUN npm run build
 
-# ---------- Production Stage: lightweight, use Nginx to serve static files ----------
-FROM nginx:alpine
+# ---------- Production Stage ----------
+FROM 530061243896.dkr.ecr.us-east-1.amazonaws.com/nginx-alpine:latest
 COPY --from=builder /app/build /usr/share/nginx/html
 
 EXPOSE 80

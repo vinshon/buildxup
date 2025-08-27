@@ -30,7 +30,7 @@ export default function EditAttendanceModal({
   const updateEmployeeAttendance = async () => {
     try {
       const res = await fetch(
-        `https://api-stage.buildxup.com/tasks/${editEmployeeData.task_id}/attendance/${editEmployeeData.id}`,
+        `http://localhost:4000/tasks/${editEmployeeData.task_id}/attendance/${editEmployeeData.id}`,
         {
           method: "PUT",
           headers: {

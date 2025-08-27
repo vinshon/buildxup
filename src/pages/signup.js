@@ -37,7 +37,7 @@ export default function Signup() {
     setGeneralError("");
 
     try {
-      const res = await fetch("https://api-stage.buildxup.com/auth/temp-otp", {
+      const res = await fetch("http://localhost:4000/auth/temp-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -89,32 +89,26 @@ export default function Signup() {
     }
 
     try {
-      const verifyRes = await fetch(
-        "https://api-stage.buildxup.com/auth/verify-otp",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email: formData.email, otp }),
-        }
-      );
+      const verifyRes = await fetch("http://localhost:4000/auth/verify-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: formData.email, otp }),
+      });
 
       if (!verifyRes.ok) throw new Error();
 
       const { name, email, phone, password } = formData;
 
-      const signupRes = await fetch(
-        "https://api-stage.buildxup.com/auth/signup",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            first_name: name,
-            email,
-            phone,
-            password,
-          }),
-        }
-      );
+      const signupRes = await fetch("http://localhost:4000/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          first_name: name,
+          email,
+          phone,
+          password,
+        }),
+      });
 
       const data = await signupRes.json();
 
@@ -129,8 +123,6 @@ export default function Signup() {
       localStorage.setItem("user_id", data.data.user_id);
       localStorage.setItem("company_id", data.data.company_id);
       localStorage.setItem("role", data.data.role);
-      // Save the current date & time
-      localStorage.setItem("login_time", new Date().toISOString());
 
       // Redirect
       navigate("/dashboard");

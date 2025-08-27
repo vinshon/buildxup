@@ -70,7 +70,7 @@ export default function AddEmployeeModal({
     };
 
     try {
-      const response = await fetch("https://api-stage.buildxup.com/employees", {
+      const response = await fetch("http://localhost:4000/employees", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -25,7 +25,7 @@ export default function Project({
 
   console.log(overviewData);
   return (
-    <div className="w-full min-h-screen flex flex-col">
+    <div className="w-full h-full flex flex-col">
       <div className=" ">
         <div className=" flex flex-wrap  justify-between ">
           <div>
@@ -114,7 +114,10 @@ export default function Project({
         </div>
         <div className=" overflow-auto">
           {projectData.length ? (
-            <div className="mt-6 px-2 py-4 overflow-y-auto scroll-smooth  lg:max-h-[calc(100vh_-_320px)]">
+            <div
+              className="mt-6 px-2 py-4 overflow-y-auto scroll-smooth  lg:max-h-[calc(100vh_-_320px)]"
+
+            >
               <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5 gap-6">
                 {projectData.map((item, i) => (
                   <div
@@ -122,14 +125,9 @@ export default function Project({
                     className="border rounded-lg bg-white shadow-md lg:hover:scale-105 transition-transform cursor-pointer"
                     onClick={() => navigate(`/dashboard/project?id=${item.id}`)}
                   >
-                    {console.log(item?.project_images[0]?.image_url)}
-
                     <div className="relative">
                       <img
-                        src={
-                          item?.project_images[0]?.image_url ||
-                          "/dashboard/building.jpg"
-                        }
+                        src="/dashboard/building.jpg"
                         alt=""
                         className="h-32 md:h-44 lg:h-32 object-cover w-full rounded-t-lg"
                       />
@@ -171,15 +169,8 @@ export default function Project({
               style={{ height: "calc(100vh - 320px)" }}
             >
               <div className="flex flex-col items-center justify-center text-gray-400 text-center">
-                <img
-                  src="/Empty-Data.png"
-                  alt="Empty"
-                  className=" max-w-32 mb-2"
-                />
-                <p className=" mt-5">
-                  Looks like you don’t have any projects here. Add one to begin
-                  tracking!
-                </p>
+                <img src="/Empty-Data.png" alt="Empty" className=" max-w-32 mb-2" />
+                <p className=" mt-5">Looks like you don’t have any projects here. Add one to begin tracking!</p>
               </div>
             </div>
           )}

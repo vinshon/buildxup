@@ -15,7 +15,6 @@ export default function Overview({ overviewData, setOverviewData }) {
     );
   }
 
-  
   const {
     status_counts,
     total_projects,

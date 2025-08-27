@@ -16,7 +16,7 @@ export default function DashboardView({ setRoute, setSelectedProjectId }) {
 
       try {
         const res = await fetch(
-          `https://api-stage.buildxup.com/projects?status=${projectStatus}`,
+          `http://localhost:4000/projects?status=${projectStatus}`,
           {
             method: "GET",
             headers: {
@@ -38,7 +38,7 @@ export default function DashboardView({ setRoute, setSelectedProjectId }) {
         console.error("Fetch error:", err.message);
       }
       try {
-        const res = await fetch(`https://api-stage.buildxup.com/projects/overview`, {
+        const res = await fetch(`http://localhost:4000/projects/overview`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

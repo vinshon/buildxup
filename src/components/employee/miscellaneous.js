@@ -9,7 +9,7 @@ import {
 
 export default function Miscellaneous({ taskId }) {
   const TASK_ID = taskId; // replace this
-  const API_URL = `https://api-stage.buildxup.com/tasks/${taskId}/miscellaneous`;
+  const API_URL = `http://localhost:4000/tasks/${taskId}/miscellaneous`;
 
   const [data, setData] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);

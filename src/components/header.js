@@ -111,9 +111,9 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10 ">
               <div className="space-y-2 py-6 ">
-                {navItems.map((item , i) => (
+                {navItems.map((item, i) => (
                   <Link
-                  key={i}
+                    key={i}
                     to={item.path}
                     onClick={() => setMobileMenuOpen(false)}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 hover:text-primary"
@@ -123,12 +123,18 @@ export default function Example() {
                 ))}
               </div>
               <div className="py-6 ">
-                <p className=" hover:text-primary -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                <Link
+                  to="/login"
+                  className=" hover:text-primary -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                >
                   Log in
-                </p>
-                <p className="hover:text-primary -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                </Link>
+                <Link
+                  to="/signup"
+                  className="hover:text-primary -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                >
                   Sign up
-                </p>
+                </Link>
               </div>
             </div>
           </div>

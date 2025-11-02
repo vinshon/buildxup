@@ -55,11 +55,11 @@ export default function Login() {
   };
 
   return (
-    <div className="w-full">
-      <div className="grid grid-cols-12">
+    <div className="w-full ">
+      <div className=" flex items-center justify-center  lg:grid lg:grid-cols-12">
         <div
           style={{ backgroundImage: "url('/login/loginBg.jpg')" }}
-          className="col-span-6 flex items-center justify-center h-screen w-full bg-cover bg-center bg-no-repeat"
+          className="col-span-6 lg:flex items-center justify-center h-screen w-full bg-cover bg-center bg-no-repeat hidden"
         >
           <img
             src="/login/login.png"
@@ -68,8 +68,8 @@ export default function Login() {
           />
         </div>
 
-        <div className="col-span-6 flex items-center justify-center bg-white">
-          <div className="w-[420px] mx-auto">
+        <div className="lg:col-span-6 flex items-center justify-center bg-white h-full">
+          <div className="lg:w-[420px] mx-auto px-5 py-10">
             <div className="flex flex-col gap-1 items-center justify-center">
               <img
                 src="/logo-buildxup.png"

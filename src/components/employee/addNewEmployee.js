@@ -49,8 +49,8 @@ export default function AddEmployeeModal({
       newErrors.mobile = "Enter a valid 10-digit number";
     }
 
-    if (formData.aadhar && !/^\d{12}$/.test(formData.aadhar)) {
-      newErrors.aadhar = "Enter a valid 12-digit Aadhar number";
+    if (formData.aadhar && !/^\d{16}$/.test(formData.aadhar)) {
+      newErrors.aadhar = "Enter a valid 16-digit Aadhar number";
     }
 
     setErrors(newErrors);

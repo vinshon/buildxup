@@ -54,7 +54,7 @@ export default function Example({
   }, [open]);
 
   const handleSubmit = async () => {
-    console.log(startDate, endDate)
+    console.log(startDate, endDate);
     const formData = new FormData();
     formData.append("project_name", projectName);
     formData.append("project_location", location);
@@ -199,7 +199,12 @@ export default function Example({
                       <input
                         type="text"
                         value={validationAmount}
-                        onChange={(e) => setValidationAmount(e.target.value)}
+                        onChange={(e) => {
+                          const value = e.target.value;
+                          if (/^\d*$/.test(value)) {
+                            setValidationAmount(value);
+                          }
+                        }}
                         className="p-3 hover:border-black border bg-white border-gray-300 rounded-md mt-3 w-full focus:outline-blue-500"
                       />
                     </div>
@@ -208,7 +213,12 @@ export default function Example({
                       <input
                         type="text"
                         value={spentAmount}
-                        onChange={(e) => setSpentAmount(e.target.value)}
+                        onChange={(e) => {
+                          const value = e.target.value;
+                          if (/^\d*$/.test(value)) {
+                            setSpentAmount(value);
+                          }
+                        }}
                         className="p-3 hover:border-black border bg-white border-gray-300 rounded-md mt-3 w-full focus:outline-blue-500"
                       />
                     </div>
@@ -250,7 +260,7 @@ export default function Example({
                           onChange={(newValue) => setEndDate(newValue)}
                         />
                       </LocalizationProvider> */}
-                       <input
+                      <input
                         type="date"
                         value={endDate}
                         onChange={(e) => setEndDate(e.target.value)}

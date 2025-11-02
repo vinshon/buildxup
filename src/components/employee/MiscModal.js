@@ -95,7 +95,7 @@ const MiscModal = ({ isOpen, onClose, onRefresh, editData, taskId }) => {
 
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div>
-                  <label className="text-sm">Miscellaneous Name</label>
+                  <label className="text-sm">Miscellaneous Name <span className="text-red-500">*</span></label>
                   <input
                     type="text"
                     className="w-full border rounded-md p-2 mt-1"
@@ -106,7 +106,7 @@ const MiscModal = ({ isOpen, onClose, onRefresh, editData, taskId }) => {
                   />
                 </div>
                 <div>
-                  <label className="text-sm">Quantity</label>
+                  <label className="text-sm">Quantity <span className="text-red-500">*</span></label>
                   <input
                     type="text"
                     className="w-full border rounded-md p-2 mt-1"
@@ -117,14 +117,18 @@ const MiscModal = ({ isOpen, onClose, onRefresh, editData, taskId }) => {
                   />
                 </div>
                 <div className="col-span-2">
-                  <label className="text-sm">Price</label>
+                  <label className="text-sm">Price <span className="text-red-500">*</span></label>
                   <input
-                    type="number"
+                    type="text"
                     className="w-full border rounded-md p-2 mt-1"
                     value={form.price}
-                    onChange={(e) =>
-                      setForm({ ...form, price: e.target.value })
-                    }
+                  
+                    onChange={(e) => {
+                          const value = e.target.value;
+                          if (/^\d*$/.test(value)) {
+                            setForm({ ...form, price: e.target.value })
+                          }
+                        }}
                   />
                 </div>
               </div>

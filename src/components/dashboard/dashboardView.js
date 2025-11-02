@@ -32,6 +32,7 @@ export default function DashboardView({ setRoute, setSelectedProjectId }) {
           throw new Error(data.message || "Failed to fetch project data");
         }
         setProjectData(data.data);
+        
         setTotalProjects(data.data.length);
         console.log(data); // Or set state here
       } catch (err) {

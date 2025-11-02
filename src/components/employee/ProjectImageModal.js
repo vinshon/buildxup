@@ -21,7 +21,8 @@ export default function ProjectImageModal({ onClose, onRefresh, editImage, taskI
     const token = localStorage.getItem("token");
     const formData = new FormData();
     if (file) formData.append("images", file);
-    formData.append("description", description);
+    let Des=description? description : "Unkown";
+    formData.append("description", Des);
 
     const url = editImage
       ? `https://api-stage.buildxup.com/tasks/${taskId}/images/${editImage.id}`
